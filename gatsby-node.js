@@ -9,7 +9,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+      allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___title]}) {
         edges {
           node {
             frontmatter {
@@ -29,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
     /* Post pages */
     allMarkdownRemark.edges.forEach(({ node }) => {
       // Check path prefix of post
-      if (node.frontmatter.path.indexOf(config.pages.blog) !== 0) {
+      if (node.frontmatter.path.indexOf(config.pages.projects) !== 0) {
         // eslint-disable-next-line no-throw-literal
         throw `Invalid path prefix: ${node.frontmatter.path}`;
       }
@@ -49,7 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
       .filter(({ node: { fileAbsolutePath } }) => fileAbsolutePath.match(regexForIndex));
 
     /* Tag pages */
-    const allTags = [];
+    /* const allTags = [];
     defaultPosts.forEach(({ node }) => {
       node.frontmatter.tags.forEach((tag) => {
         if (allTags.indexOf(tag) === -1) allTags.push(tag);
@@ -65,7 +65,7 @@ exports.createPages = ({ actions, graphql }) => {
             tag,
           },
         });
-      });
+      }); */
 
     return 1;
   });

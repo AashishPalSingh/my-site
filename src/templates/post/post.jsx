@@ -4,10 +4,9 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Header from '../../components/PageLayout/Header';
 import SidebarWrapper from '../../components/PageLayout/Sidebar';
-import SEO from '../../components/Seo';
-import Comment from '../../components/Comment';
-import Config from '../../../config';
-import Utils from '../../utils/pageUtils';
+/* import Comment from '../../components/Comment'; */
+/* import Config from '../../../config'; * /
+/* import Utils from '../../utils/pageUtils'; */
 
 import 'prismjs/themes/prism-solarizedlight.css';
 import './highlight-syntax.less';
@@ -16,23 +15,17 @@ import style from './post.module.less';
 const Post = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
   const {
-    title, cover: { childImageSharp: { fluid } }, excerpt, path,
+    title, cover: { childImageSharp: { fluid } }, excerpt /* , path */,
   } = frontmatter;
 
-  const canonicalUrl = Utils.resolvePageUrl(
+  /* const canonicalUrl = Utils.resolvePageUrl(
     Config.siteUrl,
     Config.pathPrefix,
     path,
-  );
+  ); */
   return (
     <Layout className="outerPadding">
       <Layout className="container">
-        <SEO
-          title={title}
-          description={excerpt}
-          path={path}
-          keywords={['Rolwin', 'Reevan', 'Monteiro', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby', 'technology']}
-        />
         <Header />
         <SidebarWrapper>
           <div className="marginTopTitle">
@@ -41,7 +34,8 @@ const Post = ({ data }) => {
               <Img className={style.bannerImg} fluid={fluid} title={excerpt} alt={title} />
             </div>
             <article className={style.blogArticle} dangerouslySetInnerHTML={{ __html: html }} />
-            <Comment pageCanonicalUrl={canonicalUrl} pageId={title} />
+            {/* <Comment pageCanonicalUrl={canonicalUrl} pageId={title} /> */}
+
           </div>
         </SidebarWrapper>
       </Layout>
@@ -56,7 +50,7 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         title
-        date(formatString: "DD MMM YYYY")
+        url
         tags
         path
         excerpt

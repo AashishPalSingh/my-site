@@ -9,38 +9,38 @@ const SkillsProgress = () => (
       <Col xs={24} sm={24} md={12}>
 
         <ProgressBar
-          percent={80}
-          text="Javascript"
+          percent={85}
+          text="Java"
         />
         <ProgressBar
-          percent={95}
-          text="ReactJS"
+          percent={80}
+          text="JavaScript"
+        />
+        <ProgressBar
+          percent={70}
+          text="J2EE"
         />
         <ProgressBar
           percent={85}
-          text="Gatsby"
-        />
-        <ProgressBar
-          percent={90}
-          text="NodeJS"
+          text="HTML"
         />
       </Col>
       <Col xs={24} sm={24} md={12}>
         <ProgressBar
-          percent={70}
-          text="Python"
+          percent={85}
+          text="CSS"
         />
         <ProgressBar
-          percent={90}
-          text="Mysql"
+          percent={70}
+          text="Algorithms"
         />
         <ProgressBar
           percent={78}
-          text="MongoDB"
+          text="Data Structures"
         />
         <ProgressBar
           percent={80}
-          text="Wordpress"
+          text="JS Frameworks"
         />
       </Col>
     </Row>
