@@ -15,10 +15,8 @@ module.exports = {
     resume: 'resume',
   },
   social: {
-    github: 'https://github.com/rolwin100',
-    facebook: 'https://www.facebook.com/rolwin.monteiro',
-    twitter: 'https://twitter.com/rolwin100',
-    instagram: 'https://www.instagram.com/reevan100/',
+    facebook: 'https://www.facebook.com/profile.php?id=100003720356355',
+    instagram: 'https://www.instagram.com/priyanka.mishra600',
     rss: '/rss.xml',
   },
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT || 'https://getform.io/f/48f2ac64-29ae-4a38-b445-06ad67b1bc42',
