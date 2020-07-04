@@ -1,7 +1,7 @@
 {
-  "name": "rolwinreevan_gatsby_blog",
+  "name": "my-site",
   "private": true,
-  "description": "the most beautiful gatsby template ever designed using antd",
+  "description": "site for my personal use",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -58,6 +58,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rolwin100/rolwinreevan_gatsby_blog"
+    "url": "https://github.com/AashishPalSingh/my-site"
   }
 }
