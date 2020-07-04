@@ -16,8 +16,8 @@ module.exports = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: 'Rolwin Reevan',
-      short_name: 'Rolwin Reevan',
+      name: 'Priyanka Mishra App',
+      short_name: 'Priyanka Mishra App',
       start_url: '/',
       background_color: '#304CFD',
       theme_color: '#304CFD',
