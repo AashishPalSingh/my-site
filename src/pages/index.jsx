@@ -7,8 +7,23 @@ import AboutMe from '../components/PageFragments/HomePage/AboutMe';
 import Skills from '../components/PageFragments/HomePage/SkillProgress';
 
 export default () => (
-  <Layout className="outerPadding">
-    <Layout className="container">
+  <Layout
+    className="outerPadding"
+    style={{
+      backgroundColor: 'var(--bg)',
+      color: 'var(--textNormal)',
+      transition: 'color 0.2s ease-out, background 0.2s ease-out',
+    }}
+  >
+    <Layout
+      className="container"
+      style={{
+        backgroundColor: 'var(--bg)',
+        color: 'var(--textNormal)',
+        transition: 'color 0.2s ease-out, background 0.2s ease-out',
+      }}
+    >
+
       <Header />
       <SidebarWrapper>
         <>
