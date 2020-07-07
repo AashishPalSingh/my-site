@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { Layout } from 'antd';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import 'font-awesome/less/font-awesome.less';
 import style from './header.module.less';
 import '../../../styles/global.less';
@@ -56,6 +57,20 @@ export default () => {
               <Link to="/resume" onClick={toggleMenu} activeClassName={style.anchorActive}>
                 Resume
               </Link>
+            </li>
+            <li className={style.navItem}>
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  <label className="tog" htmlFor="a">
+                    <input
+                      type="checkbox"
+                      onChange={(e) => { (toggleTheme(e.target.checked ? 'dark' : 'light')); }}
+                      checked={theme === 'dark'}
+                    />
+                    {theme === 'dark' ? (<div className="on" />) : (<div className="off" />)}
+                  </label>
+                )}
+              </ThemeToggler>
             </li>
           </ul>
         </div>
