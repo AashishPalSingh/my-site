@@ -6,7 +6,12 @@ module.exports = [
   'gatsby-plugin-sharp',
   'gatsby-plugin-less',
   'gatsby-plugin-dark-mode',
-  'gatsby-plugin-offline',
+  {
+    resolve: 'gatsby-plugin-offline',
+    options: {
+      appendScript: require.resolve(`${__dirname}/src/custom-sw-code.js`),
+    },
+  },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
