@@ -1,3 +1,3 @@
 setTimeout(() => {
-    self.registration.showNotification("Hello, world!")
-}, 15000);
+    self.registration.showNotification("Hello, Eve! How you doing?");
+}, 10000);

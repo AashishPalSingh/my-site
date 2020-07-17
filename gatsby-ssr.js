@@ -16,7 +16,7 @@ void function() {
     if (result === 'granted') {
       navigator.serviceWorker.ready.then(function(registration) {
         registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
+          body: 'Hello, Eve! You will recieve a notification in 10 secs',
           icon: '../images/touch/chrome-touch-icon-192x192.png',
           vibrate: [200, 100, 200, 100, 200, 100, 200],
           tag: 'vibration-sample'
