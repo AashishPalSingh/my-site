@@ -1,15 +1,18 @@
 const webpush = require('web-push');
 const subscription = {
-    endpoint: 'https://fcm.googleapis.com/fcm/send/cJgPOECvw1w:APA91bGfeltL3VBnRXOnxzRo3PAIbT5gM-2mTbVOniLsg-VgZ9RUYuQv5tJN13gY6qF9doOwjWCc0YG492FIIEq6vXfneZLDnxA9V0bZSJ7mgyERA1N-OAuZVz-zwGRfOLYzJA0u4XPW',
+    endpoint: 'https://fcm.googleapis.com/fcm/send/fZxv_okruKA:APA91bHyMNpxsbebuVVd5QT4W8rk-ER1nNAzrGMq1AdZXrsB_Z0bvCcHegRG2fqfL3DBd85oRIP6Y1EZaCFh-UBUwHJYcWoTzfbT8X38jnhLr5OclE9OBDiRkArOBNUtinv50w0ZWWNS',
     keys: {
-        p256dh: 'BOEtT8e4_h3ReniqZ_e0squlZihTG-QlrJlPv6k1oZ1sN5SwYtLVtDZYvkt7tVmcJGZQZsHlUqBFkPY2mL6ZZDQ',
-        auth: 'WBm1U9r9WeJ0F4SltevXTQ',
+        p256dh: 'BC_MbOEdKcqztLFOCj8vchS_NUe7T4QZe3CZaoe_617qHVK6DK9GZZATCRRoazpEPTfOnvspL9q-ixYKbIcLQQ8',
+        auth: 'wNXg7R6tewpGCIG0rxPIdA',
     },
 };
 const notification = JSON.stringify({
-    title: 'Good night',
-    body: 'Good night boss',
-    tag: 'ashsih'
+    title: 'Good Morning',
+    options: {
+        body: 'Good Morning Eve',
+        tag: 'ashish',
+        icon: '/icons/icon-48x48.png',
+    }
 });
 webpush.setVapidDetails(
     'mailto:ashujss11@gmail.com',
