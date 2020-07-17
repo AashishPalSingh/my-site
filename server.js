@@ -1,14 +1,14 @@
 const webpush = require('web-push');
 const subscription = {
-    endpoint: 'https://fcm.googleapis.com/fcm/send/egjJm1Hh5h8:APA91bHZSBkH_maJ1gWXCQm5so2v3L72w6K9cbGjStz7i5rrgOBMZ4ma26Ek13AdtwLCXq0xA0efjhoP_DWOioeIser2Y_3vCTDaPODeiMxq2vcG2ch_WRBn2fMSe41yzGBazjGZ8rOG',
+    endpoint: 'https://fcm.googleapis.com/fcm/send/cJgPOECvw1w:APA91bGfeltL3VBnRXOnxzRo3PAIbT5gM-2mTbVOniLsg-VgZ9RUYuQv5tJN13gY6qF9doOwjWCc0YG492FIIEq6vXfneZLDnxA9V0bZSJ7mgyERA1N-OAuZVz-zwGRfOLYzJA0u4XPW',
     keys: {
-        p256dh: 'BNLU7H2BviGt0ks8X_KLmd1EHZuFnXrL3vOYOoKr30tFcoHTqgDiDMaxNyL3LSHdDfOKxw2OaEgsaPbD_zNG4_c"',
-        auth: '04vJ6dtAeCeXoqh-jnY10g',
+        p256dh: 'BOEtT8e4_h3ReniqZ_e0squlZihTG-QlrJlPv6k1oZ1sN5SwYtLVtDZYvkt7tVmcJGZQZsHlUqBFkPY2mL6ZZDQ',
+        auth: 'WBm1U9r9WeJ0F4SltevXTQ',
     },
 };
 const notification = JSON.stringify({
-    title: 'ashish',
-    body: 'I’ve just published “Web Push Notifications”.',
+    title: 'Good night',
+    body: 'Good night boss',
     tag: 'ashsih'
 });
 webpush.setVapidDetails(
