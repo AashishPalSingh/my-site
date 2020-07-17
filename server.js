@@ -1,15 +1,9 @@
 const webpush = require('web-push');
-const subscription = {
-    endpoint: 'https://fcm.googleapis.com/fcm/send/fZxv_okruKA:APA91bHyMNpxsbebuVVd5QT4W8rk-ER1nNAzrGMq1AdZXrsB_Z0bvCcHegRG2fqfL3DBd85oRIP6Y1EZaCFh-UBUwHJYcWoTzfbT8X38jnhLr5OclE9OBDiRkArOBNUtinv50w0ZWWNS',
-    keys: {
-        p256dh: 'BC_MbOEdKcqztLFOCj8vchS_NUe7T4QZe3CZaoe_617qHVK6DK9GZZATCRRoazpEPTfOnvspL9q-ixYKbIcLQQ8',
-        auth: 'wNXg7R6tewpGCIG0rxPIdA',
-    },
-};
+const subscription = require('./ashish.json');
 const notification = JSON.stringify({
     title: 'Good Morning',
     options: {
-        body: 'Good Morning Eve',
+        body: 'Good Morning Ashish',
         tag: 'ashish',
         icon: '/icons/icon-48x48.png',
     }

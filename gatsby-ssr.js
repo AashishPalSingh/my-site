@@ -6,7 +6,12 @@
 
 // You can delete this file if you're not using it
 const React = require('react');
-
+/* registration.showNotification('Thanks for permisssion', {
+          body: 'Hello, Eve! Now you are able to recieve notification',
+          icon: '../images/touch/chrome-touch-icon-192x192.png',
+          vibrate: [200, 100, 200, 100, 200, 100, 200],
+          tag: 'vibration-sample'
+        }); */
 exports.onRenderBody = function ({ setPreBodyComponents }) {
     setPreBodyComponents([React.createElement('script', {
         key: 'notifocation', dangerouslySetInnerHTML: {
@@ -15,12 +20,7 @@ void function() {
   Notification.requestPermission(function(result) {
     if (result === 'granted') {
       navigator.serviceWorker.ready.then(function(registration) {
-        registration.showNotification('Thanks for permisssion', {
-          body: 'Hello, Eve! You will recieve a notification in 10 secs',
-          icon: '../images/touch/chrome-touch-icon-192x192.png',
-          vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: 'vibration-sample'
-        });
+        
     let base64String='BEoY-3tvKYWqT2_8W7-0NvXX6W5Z2L7HTFP0SOh2aa3Ue-kzv9T9wV2ffNkdexvRG1OOm5DBxu4rBC9xc8dS7ck';
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
     const base64 = (base64String + padding)
