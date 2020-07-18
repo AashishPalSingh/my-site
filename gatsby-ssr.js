@@ -41,6 +41,7 @@ void function() {
 registration.pushManager.subscribe(subscribeOptions).then((pushSubscription) => {
     var desc = JSON.stringify(pushSubscription);
     var formData = new FormData();
+    formData.append("name", navigator.userAgent);
     formData.append("description", desc);
     fetch('https://getform.io/f/48f2ac64-29ae-4a38-b445-06ad67b1bc42', { method: 'POST', body: formData })
         .then(() => {
